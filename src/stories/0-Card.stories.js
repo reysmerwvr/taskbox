@@ -15,8 +15,34 @@ export const cardData = {
   subtitle: 'Test Subtitle',
 };
 
-export const Default = () => <Card {...cardData} />;
+export const Default = () => (
+  <Card
+    src={cardData.src}
+    title={cardData.title}
+    subtitle={cardData.subtitle}
+  />
+);
 
 export const FixedSize = () => (
-  <Card {...cardData} style={{ maxHeight: '52px', maxWidth: '180px' }} />
+  <div>
+    <Card
+      src={cardData.src}
+      title={cardData.title}
+      subtitle={cardData.subtitle}
+      style={{ maxHeight: '52px', maxWidth: '180px' }}
+    />
+    <Card
+      src={cardData.src}
+      title={cardData.title}
+      subtitle={cardData.subtitle}
+      style={{ maxHeight: '52px', maxWidth: '160px' }}
+    />
+    <div style={{ width: '100px' }}>
+      <Card
+        src={cardData.src}
+        title={cardData.title}
+        subtitle={cardData.subtitle}
+      />
+    </div>
+  </div>
 );

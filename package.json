@@ -53,8 +53,28 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^1.7.0",
+    "eslint-plugin-react-hooks": "0.0.0-235a6c4af",
     "prettier": "^1.19.1",
     "react-test-renderer": "^16.13.0"
+  },
+  "peerDependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/react@1.0.14",
+      "tester": "bit.envs/testers/karma-mocha@1.7.1"
+    },
+    "overrides": {
+      "*": {
+        "peerDependencies": {
+          "react": "^16.13.0",
+          "react-dom": "^16.13.0"
+        }
+      }
+    },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
   }
 }
